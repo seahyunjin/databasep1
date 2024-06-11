@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname))); // 현재 디렉토리를 정적 
 
 // 기본 경로로 index.html 제공
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index1.html'));
 });
 
 // 리뷰 정보 조회
