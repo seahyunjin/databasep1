@@ -4,11 +4,11 @@ const app = express();
 const path = require('path');
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'routes'))); // routes 디렉토리를 정적 파일 경로로 설정
+app.use(express.static(path.join(__dirname))); // routes 디렉토리를 정적 파일 경로로 설정
 
 // 기본 경로로 routes 디렉토리의 index.html 제공
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'routes', 'index1.html')); // 필요한 경우 index1.html로 변경
+    res.sendFile(path.join(__dirname,  'index1.html')); // 필요한 경우 index1.html로 변경
 });
 
 // 리뷰 정보 조회
