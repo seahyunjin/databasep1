@@ -1,11 +1,10 @@
 {
     "version": 2,
     "builds": [
-      { "src": "public/test3_app.js", "use": "@vercel/node" }
+      { "src": "routes/test3_app.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/public/test3_app.js" }
+      { "src": "/(.*)", "dest": "/routes/test3_app.js" }
     ]
   }
-
   
