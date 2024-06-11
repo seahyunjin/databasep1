@@ -1,15 +1,14 @@
 const express = require('express');
-const db = require('../lib/db1.js');
+const db = require('../lib/db.js');
 const app = express();
 const path = require('path');
 
-// 정적 파일 경로 설정
 app.use(express.json());
 app.use(express.static(path.join(__dirname))); // 현재 디렉토리를 정적 파일 경로로 설정
 
 // 기본 경로로 index.html 제공
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index1.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // 리뷰 정보 조회
